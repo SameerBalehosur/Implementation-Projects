@@ -21,10 +21,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.testyantra.tutorial.model.Tutorial;
 import com.testyantra.tutorial.repository.TutorialRepository;
 
-/**
- * @author Sameer Balehosur
- *
- */
 @CrossOrigin(origins = "http://localhost:8080")
 @RestController
 @RequestMapping("/api")
