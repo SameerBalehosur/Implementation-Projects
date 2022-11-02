@@ -411,3 +411,18 @@ java.lang.InterruptedException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-11-02 15:46:55.815
 !MESSAGE executing callback sts4.classpath.JkgyNuqd SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-11-02 16:12:26.930
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-11-02 16:12:26.936
+!MESSAGE classpath=92 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-11-02 16:12:26.940
+!MESSAGE buffering callback sts4.classpath.JkgyNuqd spring-boot-jpa-h2 false 92
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-11-02 16:12:26.941
+!MESSAGE executing callback sts4.classpath.JkgyNuqd 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-11-02 16:12:26.980
+!MESSAGE executing callback sts4.classpath.JkgyNuqd SUCCESS [done]
