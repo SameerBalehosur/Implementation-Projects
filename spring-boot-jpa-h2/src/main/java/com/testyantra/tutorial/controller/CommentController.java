@@ -59,7 +59,6 @@ public class CommentController {
 	      commentRequest.setTutorial(tutorial);
 	      return commentRepository.save(commentRequest);
 	    }).orElseThrow(() -> new ResourceNotFoundException("Not found Tutorial with id = " + tutorialId));
-
 	    return new ResponseEntity<>(comment, HttpStatus.CREATED);
 	  }
 
