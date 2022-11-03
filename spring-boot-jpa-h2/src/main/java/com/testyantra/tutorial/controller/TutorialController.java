@@ -1,6 +1,5 @@
 package com.testyantra.tutorial.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.testyantra.tutorial.model.Tutorial;
 import com.testyantra.tutorial.repository.TutorialRepository;
+import com.testyantra.tutorial.serviceimpl.TutorialServiceImpl;
 
 /**
  * @author Sameer Balehosur
@@ -31,22 +31,39 @@ import com.testyantra.tutorial.repository.TutorialRepository;
 public class TutorialController {
 	@Autowired
 	TutorialRepository tutorialRepository;
+	
+	@Autowired
+	TutorialServiceImpl tutorialServiceImpl;
 
+//	@GetMapping("/tutorials")
+//	public ResponseEntity<List<Tutorial>> getAllTutorials(@RequestParam(required = false) String title) {
+//		try {
+//			List<Tutorial> tutorials = new ArrayList<Tutorial>();
+//
+//			if (title == null)
+//				tutorialRepository.findAll().forEach(tutorials::add);
+//			else
+//				tutorialRepository.findByTitleContaining(title).forEach(tutorials::add);
+//
+//			if (tutorials.isEmpty()) {
+//				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+//			}
+//
+//			return new ResponseEntity<>(tutorials, HttpStatus.OK);
+//		} catch (Exception e) {
+//			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+//		}
+//	}
+	
 	@GetMapping("/tutorials")
 	public ResponseEntity<List<Tutorial>> getAllTutorials(@RequestParam(required = false) String title) {
 		try {
-			List<Tutorial> tutorials = new ArrayList<Tutorial>();
-
-			if (title == null)
-				tutorialRepository.findAll().forEach(tutorials::add);
-			else
-				tutorialRepository.findByTitleContaining(title).forEach(tutorials::add);
-
-			if (tutorials.isEmpty()) {
-				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+			List<Tutorial> allTutorials = tutorialServiceImpl.getAllTutorials(title);
+			if(allTutorials.isEmpty()) {
+				return new ResponseEntity<>(null,HttpStatus.NOT_FOUND);
+			}else {
+				return new ResponseEntity<>(allTutorials,HttpStatus.OK);
 			}
-
-			return new ResponseEntity<>(tutorials, HttpStatus.OK);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}

@@ -4,6 +4,7 @@ import java.util.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -15,6 +16,7 @@ import lombok.ToString;
 @Setter
 @AllArgsConstructor
 @ToString
+//@NoArgsConstructorS
 public class ErrorMessages {
 	private int statusCode;
 	private Date timestamp;
