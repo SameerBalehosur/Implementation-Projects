@@ -1,0 +1,18 @@
+
+Á
+java:S4449I"ˆAnnotate the parameter with @javax.annotation.Nullable in constructor declaration, or make sure that null can not be passed as argument.(¾ûô¾üÿÿÿÿ8ñ™µºÃ0H¡RMAJORZ
+CODE_SMELL
+}
+java:S4684C"@Replace this persistent entity with a simple POJO or DTO object.(€ŞÑöûÿÿÿÿ8ñ™µºÃ0HxRCRITICALZVULNERABILITY
+À
+java:S44493"ˆAnnotate the parameter with @javax.annotation.Nullable in constructor declaration, or make sure that null can not be passed as argument.(¾ûô¾üÿÿÿÿ8ñ™µºÃ0HzRMAJORZ
+CODE_SMELL
+y
+java:S4684N"@Replace this persistent entity with a simple POJO or DTO object.(„²Ø¶8ñ™µºÃ0H¤RCRITICALZVULNERABILITY
+
+java:S2293&"YReplace the type specification in this constructor call with the diamond operator ("<>").(ìÃóİûÿÿÿÿ8™•´ºÃ0HqRMINORZ
+CODE_SMELL
+‡	java:S117E"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ÙÎıÿÿÿÿÿ8™•´ºÃ0HtRMINORZ
+CODE_SMELL
+ˆ	java:S117R"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²æûşüÿÿÿÿ8™•´ºÃ0H£RMINORZ
+CODE_SMELL

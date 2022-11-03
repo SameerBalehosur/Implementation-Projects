@@ -1,0 +1,5 @@
+package com.testyantra.tutorial.exception;
+
+public class ErrorMessage {
+
+}
