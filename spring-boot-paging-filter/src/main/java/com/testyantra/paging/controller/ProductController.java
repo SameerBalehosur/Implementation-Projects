@@ -26,20 +26,17 @@ public class ProductController {
 	@Operation(description = "This API is used to Get all product details")
 	@GetMapping("/getall")
 	public List<Product> findAllProducts() {
-		List<Product> findAllProducts = productService.findAllProducts();
-		return findAllProducts;
+		return productService.findAllProducts();
 	}
 
 	@GetMapping("/getWithSorting/{field}")
 	public List<Product> findProductsWithSorting(@PathVariable String field) {
-		List<Product> findProductsWithSorting = productService.findProductsWithSorting(field);
-		return findProductsWithSorting;
+		return productService.findProductsWithSorting(field);
 	}
 
 	@GetMapping("/getWithPagination/{offset}/{pageSize}")
 	public Page<Product> findProductsWithPagination(@PathVariable int offset, @PathVariable int pageSize) {
-		Page<Product> findProductsWithPagination = productService.findProductsWithPagination(offset, pageSize);
-		return findProductsWithPagination;
+		return productService.findProductsWithPagination(offset, pageSize);
 	}
 
 	@GetMapping("/getWithSortingAndPaging/{offset}/{pageSize}/{field}")

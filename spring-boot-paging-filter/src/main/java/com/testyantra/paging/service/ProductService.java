@@ -18,6 +18,8 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
 
+import com.testyantra.paging.exception.EmptyDataException;
+import com.testyantra.paging.exception.InvalidInputDataException;
 import com.testyantra.paging.model.Product;
 import com.testyantra.paging.repository.ProductRepository;
 
@@ -33,7 +35,7 @@ import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 public class ProductService {
 	@Autowired
 	private ProductRepository repository;
-
+//For Inserting the default data to db
 //    @PostConstruct
 //    public void initDB() {
 //        List<Product> products = IntStream.rangeClosed(1, 200)
@@ -43,21 +45,30 @@ public class ProductService {
 //    }
 
 	public List<Product> findAllProducts() {
-		return repository.findAll();
+		List<Product> findAll = repository.findAll();
+		if(!findAll.isEmpty()) {
+			return findAll;
+		}else {
+			throw new EmptyDataException("The List is Empty");
+		}
 	}
 
 	public List<Product> findProductsWithSorting(String field) {
-		return repository.findAll(Sort.by(Sort.Direction.ASC, field));
+		if(field.equalsIgnoreCase("id") || field.equalsIgnoreCase("name") ||  field.equalsIgnoreCase("price") ||  field.equalsIgnoreCase("quantity")) {
+			
+			return repository.findAll(Sort.by(Sort.Direction.ASC, field));
+		}else {
+			throw new InvalidInputDataException("Invalid Input Sorting Alogorithm !!");
+		}
 	}
 
 	public Page<Product> findProductsWithPagination(int offset, int pageSize) {
-		Page<Product> products = repository.findAll(PageRequest.of(offset, pageSize));
-		return products;
+		
+		return repository.findAll(PageRequest.of(offset, pageSize));
 	}
 
 	public Page<Product> findProductsWithPaginationAndSorting(int offset, int pageSize, String field) {
-		Page<Product> products = repository.findAll(PageRequest.of(offset, pageSize).withSort(Sort.by(field)));
-		return products;
+		return repository.findAll(PageRequest.of(offset, pageSize).withSort(Sort.by(field)));
 	}
 
 	public String exportReposrts(String reportFormat) throws FileNotFoundException, JRException {
