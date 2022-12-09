@@ -1,5 +1,0 @@
-package com.testyantra.tutorial.repository;
-
-public interface TutorialRepository {
-
-}

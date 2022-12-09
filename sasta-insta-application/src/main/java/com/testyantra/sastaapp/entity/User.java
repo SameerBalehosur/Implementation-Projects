@@ -42,14 +42,14 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(name = "userId")
 	private long userId;
-	@Column(name = "name")
+	@Column(name = "name",nullable = false)
 	private String name;
-	@Column(name = "email")
+	@Column(name = "email",nullable = false)
 	@Email(message = "Please provide valid Email")
 	private String email;
-	@Column(name = "phoneNumber")
+	@Column(name = "phoneNumber",nullable = false)
 	private String phoneNumber;
-	@Column(name = "password")
+	@Column(name = "password",nullable = false)
 	private String password;
 	@Column(name = "status")
 	private String status = "Active";

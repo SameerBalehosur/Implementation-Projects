@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.testyantra.sastaapp.entity.Posts;
 import com.testyantra.sastaapp.entity.Publisher;
-import com.testyantra.sastaapp.entity.User;
 import com.testyantra.sastaapp.response.PublisherResponse;
 import com.testyantra.sastaapp.service.PublisherServiceImpl;
 /**

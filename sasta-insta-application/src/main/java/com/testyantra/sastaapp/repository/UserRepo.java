@@ -13,5 +13,9 @@ public interface UserRepo extends JpaRepository<User, Long> {
 	
 //	@Query(value = "select * from user where status='Pending'",nativeQuery = true)
 //	public User getApprovedPosts();
+	
+	public User findByEmail(String email);
+	public User findByUserId(Long userId);
+	
 
 }

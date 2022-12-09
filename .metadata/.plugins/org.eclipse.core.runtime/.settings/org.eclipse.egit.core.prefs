@@ -1,4 +1,6 @@
-GitRepositoriesView.GitDirectories=C\:\\Users\\samee\\Documents\\Implementations\\.git;
-GitRepositoriesView.GitDirectories.relative=.git;
+GitRepositoriesView.GitDirectories=C\:\\Users\\samee\\Documents\\Implementations\\.git;C\:\\Users\\samee\\Documents\\.git;
+GitRepositoriesView.GitDirectories.relative=.git;C\:\\Users\\samee\\Documents\\.git;
+RepositorySearchDialogDeepSearch=false
+RepositorySearchDialogSearchPath=C\:\\Users\\samee\\Documents\\Implementations\\sasta-insta-application
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1

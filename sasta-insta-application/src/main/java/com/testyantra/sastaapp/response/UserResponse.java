@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.testyantra.sastaapp.entity.EmailData;
 import com.testyantra.sastaapp.entity.Posts;
 import com.testyantra.sastaapp.entity.PostsPojo;
 import com.testyantra.sastaapp.entity.User;
@@ -31,4 +32,5 @@ private int totalNoOfRejectedPosts;
 private int totalNoOfPendingPosts;
 List<Posts> allListOfPosts;
 
+EmailData emailData;
 } 
