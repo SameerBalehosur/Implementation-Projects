@@ -35,7 +35,7 @@ public class PublisherServiceImpl {
 	}
 	
 	public PublisherResponse publisherLogin(Publisher publisher) {
-		if (publisher.getPublisherId() !=0 && publisher.getPassword() != null) {
+		if(publisher.getPublisherId() !=0 && publisher.getPassword() != null) {
 			publisherRepo.findById(publisher.getPublisherId()).orElseThrow();
 			return PublisherResponse.builder().message("Publisher Login Success").build();
 		} else {

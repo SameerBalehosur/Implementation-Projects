@@ -55,7 +55,6 @@ public class ProductService {
 
 	public List<Product> findProductsWithSorting(String field) {
 		if(field.equalsIgnoreCase("id") || field.equalsIgnoreCase("name") ||  field.equalsIgnoreCase("price") ||  field.equalsIgnoreCase("quantity")) {
-			
 			return repository.findAll(Sort.by(Sort.Direction.ASC, field));
 		}else {
 			throw new InvalidInputDataException("Invalid Input Sorting Alogorithm !!");
