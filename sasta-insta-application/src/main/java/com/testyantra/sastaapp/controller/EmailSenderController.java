@@ -41,6 +41,7 @@ public class EmailSenderController {
 			UserResponse sendMail = emailService.sendMailWithAttachement(data);
 			if (sendMail.getMessage().equalsIgnoreCase("Mail Sent With Attachement")) {
 				return new ResponseEntity<>(sendMail, HttpStatus.OK);
+				System.out.println("trying");
 			}
 		}
 		return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
